@@ -7,12 +7,14 @@
 
 ## ディレクトリ構成
 
+```
 ├── Gemfile
 ├── Gemfile.lock
 ├── README.md           # このファイル
 ├── lib
 │   └── ni_chan.rb      # ライブラリ本体
 └── sample.rb           # サンプルプログラム
+```
 
 ## 使い方
 
