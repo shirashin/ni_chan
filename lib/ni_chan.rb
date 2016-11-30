@@ -79,13 +79,14 @@ module NiChan
         id = post.xpath(ID_XPATH).text.to_i
         if id >= start_id
           message = post.xpath(MESSAGE_XPATH)
+          message.search('br').each{|br| br.replace("\n") }
           posts << {
             id: id,
             user_id: post.xpath(USER_ID_XPATH).text[3..-1],
             data_id: post.xpath(DATA_ID_XPATH).text,
             name: post.xpath(NAME_XPATH).text,
             date: Time.parse(post.xpath(DATE_XPATH).text.sub(/ ID:.*/, "")),
-            message: message.text.strip
+            message: message.text
           }
         end
       end
