@@ -20,6 +20,12 @@
 
 rubyとかbundlerはインストール整っている前提
 
+### スレッドの一覧を取得
+thread = NiChan::Search.new(keyword)
+
+### スレッドの投稿を取得
+thread = NiChan::Thread.new(url)
+
 ```
   bundle install
   bundle exec ruby sample.rb ほげほげ
